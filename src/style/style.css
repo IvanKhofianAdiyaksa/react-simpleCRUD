@@ -1,0 +1,165 @@
+/* ####################
+Global CSS
+#################### */
+:root {
+    --shadow: grey;
+    --yellow: #F5DD16;
+    --soft_orange: #FCC00D;
+    --orange: #FC6B0D;
+    --red: #F2360C;
+    --Montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+    font-family: var(--Montserrat);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+/* ------------ Typography ------------ */
+Link, a {
+
+    font-family: var(--Montserrat);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+    padding: 1rem;
+
+}
+
+/* ####################
+Header CSS
+#################### */
+.container {
+    padding: 2rem;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    z-index: 15;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+/* ####################
+Menu CSS
+#################### */
+.menu {
+    margin-top: 6rem;
+    padding: 1.5rem;
+    display: flex;
+    position: relative;
+    left: 10%;
+    right: 10%;
+    max-width: 80%;
+    height: 100vh;
+    background-color: white;
+}
+
+.background_menu {
+    padding: 1rem;
+    width: 300px;
+    height: fit-content;
+    position: relative;
+    background: rgba(226, 208, 208, 0.4);
+    border-radius: 8px;
+}
+
+.product_head > h3 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.product_image {
+    text-align: center;
+}
+
+.product_image > img {
+    width: calc(300px - 1rem);
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product_body {
+    margin: .5rem;
+}
+
+.action_button {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.action_button > a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: .3rem 1rem;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 0 1px 3px var(--shadow);
+}
+
+.delete_btn {
+    background-color: var(--red);
+    color: white;
+    font-weight: 700;
+}
+
+.update_btn {
+    background-color: rgb(66, 90, 197);
+    color: white;
+    font-weight: 700;
+}
+
+/* ####################
+create CSS
+#################### */
+.form {
+    margin: 2rem;
+    padding: 2rem;
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    top: 10%;
+    background-color: rgb(190, 189, 189);
+}
+
+/* ####################
+Login CSS
+####################  */
+.login {
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+/* ####################
+Register CSS
+####################  */
+.register {
+    margin-top: 100px;
+    margin-left: 50px;
+}

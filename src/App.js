@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import Create from './components/Create';
+import Update from './components/Update';
+import Login from './components/Login';
+import Register from './components/Register';
+import Cookies from 'universal-cookie';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const cookie = new Cookies();
+
+
+class App extends Component {
+    render(){
+
+        return(
+            <div>
+              <Header />
+              <Route path='/login' component={Login} />
+              <Route path='/register' component={Register} />
+              <Route exact path='/' component={Menu} />
+              <Route path='/create' component={Create} />
+              <Route path='/update/:product_id?' component={Update} />
+            </div>
+        )
+    }
 }
 
 export default App;
