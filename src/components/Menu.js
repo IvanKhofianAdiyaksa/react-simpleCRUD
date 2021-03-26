@@ -16,9 +16,9 @@ class Menu extends Component {
     }
 
     componentWillMount(){
-        // if (cookies.get('jwtToken')) {
-        //     this.setState({ login: true });
-        // }
+        if (cookies.get('jwtToken')) {
+            this.setState({ login: true });
+        }
 
         axios.get('http://localhost:3004/products')
         .then((mineData) => {
@@ -45,11 +45,11 @@ class Menu extends Component {
         })
     }
 
-    // loginRedirect = () => {
-    //     if (!this.state.login) {
-    //         return <Redirect to='/login' />
-    //     }
-    //   }
+    loginRedirect = () => {
+        if (!this.state.login) {
+            return <Redirect to='/login' />
+        }
+      }
 
     render(){
         const productList = this.state.products.map((item, index) => {
@@ -72,7 +72,7 @@ class Menu extends Component {
         })
         return(
             <div className="menu">
-                {/* {this.loginRedirect()} */}
+                {this.loginRedirect()}
                 {productList}
             </div>
         )

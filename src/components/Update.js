@@ -22,6 +22,7 @@ class Update extends Component {
         if (cookies.get('jwtToken')) {
             this.setState({ login: true });
         }
+
         // receiving params form endpoint
         const {match:{params}} = this.props;
         // console.log(params);
@@ -100,6 +101,7 @@ class Update extends Component {
         // console.log(this.state.product);
         return(
             <div className="form">
+                {this.loginRedirect()}
                 {this.renderRedirect()}
                 <form id="simple-form" action="#">
                     <label>Product</label><br/>

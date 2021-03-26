@@ -6,9 +6,9 @@ import Create from './components/Create';
 import Update from './components/Update';
 import Login from './components/Login';
 import Register from './components/Register';
-import Cookies from 'universal-cookie';
+// import Cookies from 'universal-cookie';
 
-const cookie = new Cookies();
+// const cookie = new Cookies();
 
 
 class App extends Component {

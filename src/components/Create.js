@@ -16,11 +16,11 @@ class Create extends Component {
         };
     };
 
-    // componentWillMount(){
-    //     if (cookies.get('jwtToken')) {
-    //         this.setState({ login: true });
-    //     }
-    // }
+    componentWillMount(){
+        if (cookies.get('jwtToken')) {
+            this.setState({ login: true });
+        }
+    }
 
     onFileChange = event => {
         // checking image file is added succesfully in file upload
@@ -71,16 +71,16 @@ class Create extends Component {
         }
     }
 
-    // loginRedirect = () => {
-    // if (!this.state.login) {
-    //     return <Redirect to='/login' />
-    //     }
-    // }
+    loginRedirect = () => {
+    if (!this.state.login) {
+        return <Redirect to='/login' />
+        }
+    }
     
     render(){
         return(
             <div className="form">
-                {/* {this.loginRedirect()} */}
+                {this.loginRedirect()}
                 {this.renderRedirect()}
                 <form id="simple-form" action="#">
                     <label>Product</label><br/>
